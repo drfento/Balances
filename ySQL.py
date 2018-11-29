@@ -6,7 +6,7 @@ import cx_Oracle
 # Send information to the database
 def send_sql(sql, database):
     try:
-        db = cx_Oracle.connect('OPERATIONS', 'OPERATIONS', database)
+        db = cx_Oracle.connect('#', '#', database)
         cursor = db.cursor()
         cursor.execute(sql)
 
@@ -24,7 +24,7 @@ def send_sql(sql, database):
 # Returns only one item back to a variable
 def get_sql_fetchone(sql, database):
     try:
-        db = cx_Oracle.connect('OPERATIONS', 'OPERATIONS', database)
+        db = cx_Oracle.connect('#', '#', database)
         cursor = db.cursor()
         cursor.execute(sql)
         row = cursor.fetchone()
@@ -42,7 +42,7 @@ def get_sql_fetchone(sql, database):
 # Returns a result set
 def get_sql_fetchall(sql, database):
     try:
-        db = cx_Oracle.connect('OPERATIONS', 'OPERATIONS', database)
+        db = cx_Oracle.connect('#', '#', database)
         cursor = db.cursor()
         cursor.execute(sql)
         # columns = [i[0] for i in cursor.description]
@@ -63,7 +63,7 @@ def get_sql_fetchall(sql, database):
 # Returns column headers
 def get_sql_column_headers(sql, database):
     try:
-        db = cx_Oracle.connect('OPERATIONS', 'OPERATIONS', database)
+        db = cx_Oracle.connect('#', '#', database)
         cursor = db.cursor()
         cursor.execute(sql)
         columns = [i[0] for i in cursor.description]
