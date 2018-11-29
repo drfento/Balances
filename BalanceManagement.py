@@ -262,7 +262,7 @@ def main():
     ySQL.send_sql(zQueries.sql_update_cashexshort_balancemanagement(businessdate, 'MS'), 'OPDS')
 
     # Email Issues
-    cEmail.compile_email('sfenton@caxton.com', 'OpsAdministration@caxton.com, MCampaignio@caxton.com',
+    cEmail.compile_email('#@#.com', '#@#.com, '#@#.com',
                          [gs,
                           cs_market, cs_cash,
                           citi_sd, citi_hold, citi_bal,
